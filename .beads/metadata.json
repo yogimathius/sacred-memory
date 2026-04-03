@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "server",
+  "dolt_database": "sacred_memory",
+  "project_id": "c2aa9899-b5f5-40ae-b443-32c1a73fa6ad"
+}
