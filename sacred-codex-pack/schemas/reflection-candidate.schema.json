@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ReflectionCandidate",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "kind": { "type": "string", "const": "candidate" },
+    "content": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "proposed_by": { "type": "string" },
+    "proposed_at": { "type": "string", "format": "date-time" },
+    "scope": { "type": "string", "enum": ["global", "repo", "branch", "task"] }
+  },
+  "required": ["id", "kind", "content", "proposed_by", "proposed_at"],
+  "additionalProperties": true
+}

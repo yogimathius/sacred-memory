@@ -1,0 +1,22 @@
+workflow:
+  proposal:
+    description: >
+      Agents propose new canon or enduring memory items by creating reflection candidates.
+  review:
+    description: >
+      A human curator reviews each candidate, comparing it against existing canon and memory.
+  decision:
+    description: >
+      The curator may accept, modify or reject the candidate.
+  promotion:
+    description: >
+      Accepted candidates are promoted to the appropriate tier (canon or enduring memory).
+  versioning:
+    description: >
+      Promotion into the canon creates a new version; previous versions remain accessible.
+  rejection:
+    description: >
+      Rejected candidates are archived and not considered further.
+constraints:
+  - Never auto-promote without human approval.
+  - Do not promote candidates containing secrets or personally identifiable information.

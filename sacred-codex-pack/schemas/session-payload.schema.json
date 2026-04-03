@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SessionPayload",
+  "type": "object",
+  "properties": {
+    "canon": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "enduring_memory": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "working_memory": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "reflection_candidates": {
+      "type": "array",
+      "items": { "type": "object" }
+    }
+  },
+  "required": ["canon", "enduring_memory", "working_memory"],
+  "additionalProperties": true
+}

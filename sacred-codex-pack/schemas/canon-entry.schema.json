@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CanonEntry",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "scope": { "type": "string", "enum": ["global", "repo", "branch", "task"] },
+    "kind": { "type": "string", "const": "canon" },
+    "content": { "type": ["string", "object"] },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "version": { "type": "integer", "minimum": 1 },
+    "previous_version_id": { "type": ["string", "null"] },
+    "created_at": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "kind", "content", "version", "created_at"],
+  "additionalProperties": true
+}

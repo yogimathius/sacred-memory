@@ -1,0 +1,22 @@
+order:
+  - scope_match
+  - pinned
+  - recent
+  - tag_match
+  - full_text
+rules:
+  scope_match:
+    description: >
+      Prefer memory items whose scope exactly matches the current context (for example, repo, branch or task).
+  pinned:
+    description: >
+      Pinned items are always returned before non-pinned items within the same scope.
+  recent:
+    description: >
+      More recently used items are preferred over older items.
+  tag_match:
+    description: >
+      Items tagged with query terms are ranked higher.
+  full_text:
+    description: >
+      As a fallback, perform a full-text search over content and return the highest scoring items.

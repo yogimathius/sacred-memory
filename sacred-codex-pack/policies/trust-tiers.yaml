@@ -1,0 +1,21 @@
+tiers:
+  0:
+    name: Canon
+    description: >
+      Immutable sacred content. Only curated by the user. Highest trust.
+  1:
+    name: Enduring verified
+    description: >
+      Curated long-term memory. Stable preferences, conventions and summaries.
+  2:
+    name: Working memory
+    description: >
+      Active session state. Expires or is summarised at the end of a session.
+  3:
+    name: Candidate reflection
+    description: >
+      Proposed new insights awaiting review. Not yet trusted.
+  4:
+    name: Raw session residue
+    description: >
+      Temporary logs and notes. Should not be retrieved automatically.
