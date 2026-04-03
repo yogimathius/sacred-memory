@@ -1,0 +1,18 @@
+[package]
+name = "sacred-codex-engine"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+clap = { version = "4.0", features = ["derive"] }
+sqlx = { version = "0.8.3", features = ["sqlite", "runtime-tokio-rustls", "macros"] }
+tokio = { version = "1.0", features = ["full"] }
+uuid = { version = "1.0", features = ["v4"] }
+dialoguer = "0.11.0"
+
+[[bin]]
+name = "mh"
+path = "src/engine/main.rs"

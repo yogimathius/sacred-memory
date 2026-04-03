@@ -1,4 +1,15 @@
-
 # Dolt database files (added by bd init)
 .dolt/
+
+# SQLite databases (local state, not committed)
 *.db
+
+# Rust build artifacts
+target/
+
+# Node
+node_modules/
+dist/
+
+# OS
+.DS_Store
