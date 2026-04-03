@@ -46,3 +46,9 @@ fi
 
 echo "---"
 echo "Use the sacred-memory MCP tools (recall, remember, forget, list_canon) to interact with this memory system."
+echo ""
+
+# Count what was loaded for the greeting
+AXIOM_COUNT=$(sqlite3 "$DB" "SELECT COUNT(*) FROM canon WHERE trust_tier = 0;" 2>/dev/null || echo "0")
+MEMORY_COUNT=$(sqlite3 "$DB" "SELECT COUNT(*) FROM canon WHERE trust_tier = 1;" 2>/dev/null || echo "0")
+echo "**IMPORTANT**: When starting a new session, greet the user briefly by name (Mathius) and acknowledge that the Sacred Memory harness is active. Mention that ${AXIOM_COUNT} axiom(s) and ${MEMORY_COUNT} enduring memories were loaded. Keep it to 1-2 lines — warm but concise. Example: 'Sacred Memory loaded — ${AXIOM_COUNT} axiom(s), ${MEMORY_COUNT} enduring memories active. What are we building, Mathius?'"
